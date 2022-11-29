@@ -1,0 +1,39 @@
+\documentclass[fancy]{ottercv}
+%%% use 'massive', 'fancy' or 'basic' as otterCV options
+%%% use 'german' for German dates, names etc.
+
+%%% CONTACT DETAILS
+\name{Ibrahim}{Otter}
+\adress{Estuary Drive 12}{22850 Riverside}
+\email{please@otter.me}
+% \website{otters.org}
+\phone{1}{23 456 789}
+\born[Riverside]{1994-6-3}
+% \pathtopicture[size=40mm]{static/profile.png}
+\pathtopicture[size=40mm]{static/otter.jpg}
+
+%%% SIGNATURE
+\pathtosignature[xshift=3mm, yshift=-5mm]{static/signature.png}
+\city{Riverside}
+
+%%% GEOMETRY
+% \usepackage[]{showframe}
+
+\begin{document}
+
+\input{letters/cover}
+\signature[name=true, date=false, hspace=1cm, vspace=10mm]
+\listofattachments
+
+\maketitle
+\input{cv/profile}
+\signature[hspace=1cm, vspace=5mm]
+
+\attachment[header=true]{\en{Motivational letter}\de{Motivationsschreiben}}
+\input{letters/motivation}
+
+\attachment{\de{Zeugnis}\en{School certificate}}
+\includepdf{attachments/certificate}
+
+\end{document}
+
